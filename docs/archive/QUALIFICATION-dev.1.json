@@ -1,0 +1,61 @@
+{
+  "package": "@knights-eye-chess/game-tree",
+  "version": "0.0.0-phase.5",
+  "node": "v24.19.0",
+  "packedBytes": 21431,
+  "unpackedBytes": 86688,
+  "files": 17,
+  "isolatedSourceTests": 8,
+  "installedArtifactTests": 8,
+  "runtimeInventory": {
+    "package": "@knights-eye-chess/game-tree",
+    "runtimeInputs": [
+      "src/contracts.ts",
+      "src/game-tree-runtime.js",
+      "src/pgn.ts",
+      "src/tree.ts"
+    ],
+    "externalDependencies": [
+      "chess.js@1.4.0"
+    ]
+  },
+  "firstRecordedUtc": "2026-10-04T21:46:25Z",
+  "firstRecordedUtcBasis": "First explicit UTC timestamp after required-document and source inventory reads; earlier reading time is not measured.",
+  "finishedAtUtc": "2026-10-04T21:54:22Z",
+  "sourceBaseline": "a4a430ec",
+  "qualifiedNodes": [
+    "22.13.0",
+    "24.19.0"
+  ],
+  "node22": {
+    "packedBytes": 21431,
+    "unpackedBytes": 86688,
+    "files": 17,
+    "isolatedSourceTests": 8,
+    "installedArtifactTests": 8,
+    "namedExportTypecheck": "NodeNext strict passed"
+  },
+  "originalAppTests": {
+    "tree": 25,
+    "pgn": 2,
+    "widgetFingerprint": 1,
+    "passed": 28
+  },
+  "compatibility": {
+    "declarations": 34,
+    "bytes": 14387,
+    "sha256": "1224d3e19c39e48793ca9fa87830ad4e9640fa84b05f9aa3d5d6b5d60c6c0e4c",
+    "approvedDocumentFingerprintChanged": false
+  },
+  "affectedLint": "passed",
+  "sourceBuild": "Isolated packed archive npm ci --ignore-scripts, removed dist, npm run build, npm test",
+  "installedArtifact": "Separate empty npm consumer installs the archive, runs the eight shipped tests and compiles a strict NodeNext consumer against all named exports",
+  "limitations": [
+    "Private preview; no publication/license decision",
+    "Parser preserves existing limits: no root comments/root NAGs, no result inference from unheaded movetext",
+    "Closing move-comment braces are replaced with ] at export; app formatter unchanged",
+    "Package snapshots omit host fields and leave transient-branch exclusion to the host",
+    "No engine, account, DB, UI, classifier, opening data, provider or hosting dependency"
+  ],
+  "receiptPackaging": "Repository-only qualification record is excluded from package files; sizes cover the finished shipped README/source/build/tests before this evidence file."
+}

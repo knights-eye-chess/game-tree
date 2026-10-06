@@ -1,0 +1,75 @@
+{
+  "version": "0.1.0-dev.2",
+  "sourceCommit": "d58a1a2ad3132515891a2452596ab571af4b55ba",
+  "node": "v24.19.0",
+  "sourceHashes": [
+    {
+      "path": ".gitignore",
+      "sha256": "51f1977cb4ab14529d1e1723c11e05c11e63c368926b8901c89812382fba9008"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "0e2b031ef678b687b430bbd9e3a05ea284bef75a3acbb5e0f026c58392c40bbb"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a1c881f17627c1ff4f64c137ede65d048f73cf2d4d6bad2830a9857c56676f59"
+    },
+    {
+      "path": "SOURCE-ORIGIN.json",
+      "sha256": "018a24e5311b4d6eec638b2f82a846eee5e87f1c2d192d0312d04ab33443b26a"
+    },
+    {
+      "path": "build.mjs",
+      "sha256": "f44624e7fb95b35d96830acc8310ed45fe8a72ef9f31b89bf97f198b1c3cd0b7"
+    },
+    {
+      "path": "npm-shrinkwrap.json",
+      "sha256": "e7d0da6d2b947325c7df8d1f7eca21d3fcbae4ccc1057fe175d1f1628aa967df"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6830867b999729ba231a83b748aab14ae3ca705df8cd455a45282e1b5b430a1b"
+    },
+    {
+      "path": "scripts/pack.mjs",
+      "sha256": "4acea39a16b814ab12fa59983e028a80cdd6cb5f128f308a8cdc184b0a78910b"
+    },
+    {
+      "path": "scripts/update-dependency.mjs",
+      "sha256": "c398519a64ccd3770af24bfdd353364e9bde5a477ae3d5ed2a54f66e279c15d6"
+    },
+    {
+      "path": "src/contracts.ts",
+      "sha256": "0f5d8d3181a9fc4ab6cc59d85901ca63c06f8052b1844b34aa53daf8bc0491c5"
+    },
+    {
+      "path": "src/game-tree-runtime.js",
+      "sha256": "8623b3e8cea275f4109c94b4547950c33f64a6f69ceec23a7e6f1da456f0caf9"
+    },
+    {
+      "path": "src/pgn.ts",
+      "sha256": "503fafd0902842199454837c36348152662c9f24d4276a36d222749cabee70be"
+    },
+    {
+      "path": "src/tree.ts",
+      "sha256": "918e3fe4639555b26f20b42131b3e20cf358fa6c70a9603f9ca5d71d89232514"
+    },
+    {
+      "path": "tests/tree.test.mjs",
+      "sha256": "9a8265e4c43513ab895e468be4f6b5062ba8b61dd2118e0563de1d4fee3c11b5"
+    }
+  ],
+  "standaloneNpmCi": true,
+  "standaloneBuild": true,
+  "standaloneTests": 8,
+  "packedConsumerNpmCi": true,
+  "packedConsumerTests": 8,
+  "typeConsumer": "not additionally run",
+  "limits": "Offline fixtures and process mocks; no real engine corpus, live model/provider, website deployment or physical-device qualification",
+  "postQualificationDocumentation": {
+    "changedFiles": [],
+    "verification": "Only repository README wording changed after passing source/packed runtime checks. Runtime, build scripts, tests and accepted dev.2 archive bytes unchanged.",
+    "artifactDocumentation": "Initial immutable dev.2 archive README retains earlier terminology; current repository README is corrected. Any future changed artifact requires a new version."
+  }
+}

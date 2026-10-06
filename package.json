@@ -1,0 +1,53 @@
+{
+  "name": "@knights-eye-chess/game-tree",
+  "version": "0.1.0-dev.2",
+  "private": true,
+  "type": "module",
+  "description": "Private optional structural chess tree and PGN preview",
+  "files": [
+    "dist",
+    "src",
+    "tests",
+    "build.mjs",
+    "npm-shrinkwrap.json",
+    "README.md",
+    "vendor",
+    "SOURCE-ORIGIN.json",
+    "scripts"
+  ],
+  "exports": {
+    "./tree": {
+      "types": "./dist/tree.d.ts",
+      "import": "./dist/tree.js"
+    },
+    "./pgn": {
+      "types": "./dist/pgn.d.ts",
+      "import": "./dist/pgn.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts.d.ts",
+      "import": "./dist/contracts.js"
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test",
+    "pack:checked": "npm run check && node scripts/pack.mjs",
+    "pack:artifact": "node scripts/pack.mjs"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.0",
+    "typescript": "5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knights-eye-chess/game-tree.git"
+  }
+}
