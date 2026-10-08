@@ -1,0 +1,23 @@
+{
+  "generated": "2026-10-08",
+  "scope": "Installed production dependency graph; first-party component archives excluded.",
+  "limits": [
+    "Metadata and copied notices are upstream statements, not a grant of rights by Knight\u2019s Eye.",
+    "Optional platform dependencies vary. Build/dev dependencies are not in this production inventory.",
+    "Original files embedded in assets/vendor archives retain their own terms."
+  ],
+  "packages": [
+    {
+      "name": "chess.js",
+      "version": "1.4.0",
+      "declaredLicense": "BSD-2-Clause",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/jhlywa/chess.js"
+      },
+      "upstreamNoticeFiles": [
+        "licenses/third-party/chess.js-1.4.0/LICENSE"
+      ]
+    }
+  ]
+}
