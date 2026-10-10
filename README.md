@@ -16,20 +16,16 @@ chess.js for legality; your app supplies the interface and decides how to save g
 
 ## Get started
 
-Use Node 24 or newer. This is a preview package; npm publication has not been
-performed. From a checkout of [this repository](https://github.com/knights-eye-chess/game-tree):
+Use Node 24 or newer. Install the public prerelease in your app:
 
 ```sh
-npm ci
-npm run pack:checked
+npm install @knights-eye-chess/game-tree@next
 ```
 
-The command builds, tests and writes a versioned `.tgz` in `artifacts/`.
-Install that archive in your app:
-
-```sh
-npm install /absolute/path/to/game-tree/artifacts/knights-eye-chess-game-tree-0.1.0-dev.6.tgz
-```
+The `next` tag currently resolves to `0.1.0-dev.8`; pin that exact version for a
+reproducible install. The API is still a preview. For a source checkout, use the
+development commands below; [SOURCE-ORIGIN.json](SOURCE-ORIGIN.json) records the
+historical archive provenance.
 
 Parse a game, inspect an occurrence and export its variations:
 
