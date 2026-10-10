@@ -28,7 +28,7 @@ The command builds, tests and writes a versioned `.tgz` in `artifacts/`.
 Install that archive in your app:
 
 ```sh
-npm install /absolute/path/to/game-tree/artifacts/knights-eye-chess-game-tree-0.1.0-dev.4.tgz
+npm install /absolute/path/to/game-tree/artifacts/knights-eye-chess-game-tree-0.1.0-dev.6.tgz
 ```
 
 Parse a game, inspect an occurrence and export its variations:

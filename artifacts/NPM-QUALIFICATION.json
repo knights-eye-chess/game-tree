@@ -2,10 +2,10 @@
   "schema": "knights-eye-npm-preparation/1",
   "candidate": {
     "name": "@knights-eye-chess/game-tree",
-    "version": "0.1.0-dev.4",
-    "archive": "artifacts/knights-eye-chess-game-tree-0.1.0-dev.4.tgz",
-    "bytes": 25139,
-    "sha256": "b4fe1dbef5882c07786a840f0612ab93df80807aa7f15c758619f8991f3b31bb",
+    "version": "0.1.0-dev.5",
+    "archive": "artifacts/knights-eye-chess-game-tree-0.1.0-dev.5.tgz",
+    "bytes": 25148,
+    "sha256": "d1be186e5ac83990558db5be66873f06b840322eb70938197d36631b0c789b3c",
     "dependencies": {
       "chess.js": "1.4.0"
     },
@@ -13,20 +13,60 @@
     "privateTarball": false
   },
   "checks": {
-    "sourceAndInstalledTests": 129,
+    "metadataOnlyChangesVerified": true,
+    "nonmetadataArchiveEntriesByteIdentical": true,
+    "npmPublishDryRun": true,
+    "sourceAndInstalledTests": "not run for this candidate",
     "publicEsmImports": 19,
     "cliHelpCommands": 2,
     "strictNodeNextTypes": true,
-    "browserConsumer": "Chromium: board mount, tree PGN import, supplied-evidence classifier",
-    "npmPublishDryRun": true,
+    "browserConsumer": "not run for this candidate",
     "combinedSixArchiveInstall": true,
-    "historicalArchivesUnchanged": 62,
-    "immutableCollisionRejected": true
+    "historicalArchivesUnchanged": 54
   },
   "registryPublicationPerformed": false,
   "visibilityChanged": false,
   "limitations": [
     "No live model quality or engine performance claim",
     "Owner npm account/scope authority and publication authorization required"
-  ]
+  ],
+  "priorCandidateEvidence": {
+    "candidate": {
+      "name": "@knights-eye-chess/game-tree",
+      "version": "0.1.0-dev.4",
+      "archive": "artifacts/knights-eye-chess-game-tree-0.1.0-dev.4.tgz",
+      "bytes": 25139,
+      "sha256": "b4fe1dbef5882c07786a840f0612ab93df80807aa7f15c758619f8991f3b31bb",
+      "dependencies": {
+        "chess.js": "1.4.0"
+      },
+      "privateSource": true,
+      "privateTarball": false
+    },
+    "checks": {
+      "sourceAndInstalledTests": 129,
+      "publicEsmImports": 19,
+      "cliHelpCommands": 2,
+      "strictNodeNextTypes": true,
+      "browserConsumer": "Chromium: board mount, tree PGN import, supplied-evidence classifier",
+      "npmPublishDryRun": true,
+      "combinedSixArchiveInstall": true,
+      "historicalArchivesUnchanged": 62,
+      "immutableCollisionRejected": true
+    },
+    "note": "These checks were run on the prior candidate. All nonmetadata archive entries in the prior and current candidate are byte-identical; the current candidate does not claim those checks were rerun."
+  },
+  "metadataComparison": {
+    "repository": "game-tree",
+    "priorVersion": "0.1.0-dev.4",
+    "newVersion": "0.1.0-dev.5",
+    "changedArchiveEntries": [
+      "package/package.json",
+      "package/SOURCE-ORIGIN.json",
+      "package/NPM-PUBLISHING.md",
+      "package/README.md"
+    ],
+    "unchangedEntries": 24,
+    "sourceRuntimeTypesAssetsByteIdentical": true
+  }
 }
