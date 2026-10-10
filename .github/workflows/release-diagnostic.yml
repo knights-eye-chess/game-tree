@@ -1,0 +1,29 @@
+name: Diagnose reviewed archive reproducibility
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.19.0
+      - run: npm install --global npm@11.9.0
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - run: node scripts/pack.mjs artifacts-ci
+      - name: Compare immutable archive members without printing contents
+        run: |
+          python3 - <<'PYCOMPARE'
+          import tarfile, pathlib, hashlib
+          filename='knights-eye-chess-game-tree-0.1.0-dev.7.tgz'
+          def members(p):
+            with tarfile.open(p) as t:
+              return {m.name:(m.mode,m.mtime,hashlib.sha256(t.extractfile(m).read()).hexdigest() if m.isfile() else None,m.size) for m in t.getmembers()}
+          old,new=members('artifacts/'+filename),members('artifacts-ci/'+filename)
+          for name in sorted(set(old)|set(new)):
+            if old.get(name)!=new.get(name): print(name,old.get(name),new.get(name))
+          print('archive hashes',[hashlib.sha256(pathlib.Path(folder+'/'+filename).read_bytes()).hexdigest() for folder in ['artifacts','artifacts-ci']])
+          PYCOMPARE
