@@ -1,6 +1,6 @@
 {
   "name": "@knights-eye-chess/game-tree",
-  "version": "0.1.0-dev.7",
+  "version": "0.1.0-dev.8",
   "private": true,
   "type": "module",
   "description": "Private optional structural chess tree and PGN preview",
