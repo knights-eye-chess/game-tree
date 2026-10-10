@@ -18,7 +18,7 @@ jobs:
         run: |
           node --input-type=module <<'JS'
           import {spawnSync} from 'node:child_process';
-          for(const key of ['dry-run','registry','access','provenance']) {
+          for(const key of ['dry-run','registry','@knights-eye-chess:registry','access','provenance']) {
             const r=spawnSync('npm',['config','get',key],{encoding:'utf8'});
             console.log({configuration:key,status:r.status,value:r.stdout.trim()});
           }
@@ -28,4 +28,10 @@ jobs:
           const read=spawnSync('npm',['view','@knights-eye-chess/game-tree@0.1.0-dev.8','--json','--registry','https://registry.npmjs.org/','--prefer-online'],{encoding:'utf8'});
           let data;try{data=JSON.parse(read.stdout);}catch{}
           console.log({registryReadStatus:read.status,name:data?.name,version:data?.version,integrity:data?.dist?.integrity,error:data?.error?.code});
+          const visibility=spawnSync('npm',['access','get','status','@knights-eye-chess/game-tree','--json'],{encoding:'utf8'});
+          let access;try{access=JSON.parse(visibility.stdout);}catch{}
+          console.log({accessStatus:visibility.status,visibility:access?.['@knights-eye-chess/game-tree']||access?.access||access?.status});
+          const publicResponse=await fetch('https://registry.npmjs.org/@knights-eye-chess%2fgame-tree');
+          const pub=await publicResponse.json();
+          console.log({anonymousHttpStatus:publicResponse.status,anonymousVersions:Object.keys(pub.versions||{}),publicIntegrity:pub.versions?.['0.1.0-dev.8']?.dist?.integrity});
           JS
