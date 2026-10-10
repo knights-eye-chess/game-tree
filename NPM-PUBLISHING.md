@@ -28,12 +28,12 @@ mkdir -p /tmp/knights-eye-release-consumer
 cd /tmp/knights-eye-release-consumer
 npm init -y
 npm install --ignore-scripts --no-audit --no-fund \
-  /workspace/board-ui/artifacts/knights-eye-chess-board-ui-0.1.0-dev.28.tgz \
+  /workspace/board-ui/artifacts/knights-eye-chess-board-ui-0.1.0-dev.29.tgz \
   /workspace/game-tree/artifacts/knights-eye-chess-game-tree-0.1.0-dev.6.tgz \
-  /workspace/move-classifier/artifacts/knights-eye-chess-move-classifier-0.1.0-dev.6.tgz \
+  /workspace/move-classifier/artifacts/knights-eye-chess-move-classifier-0.1.0-dev.8.tgz \
   /workspace/pgn-annotator/artifacts/knights-eye-chess-pgn-annotator-0.1.0-dev.11.tgz \
-  /workspace/ai-analysis/artifacts/knights-eye-chess-ai-analysis-0.1.0-dev.11.tgz \
-  /workspace/cli-tools/artifacts/knights-eye-chess-cli-tools-0.1.0-dev.13.tgz
+  /workspace/ai-analysis/artifacts/knights-eye-chess-ai-analysis-0.1.0-dev.12.tgz \
+  /workspace/cli-tools/artifacts/knights-eye-chess-cli-tools-0.1.0-dev.14.tgz
 npx --no-install knights-eye-annotate --help
 npx --no-install knights-eye-answer --help
 ```
@@ -48,7 +48,7 @@ The npm organization `knights-eye-chess` must exist and the publishing account m
 
 The first release order is:
 
-1. Board UI, game-tree, move-classifier and ai-analysis can be released independently of sibling packages.
+1. Board UI, game-tree and move-classifier can be released independently of sibling packages; release ai-analysis after its exact move-classifier version is available.
 2. Release pgn-annotator after its exact move-classifier version is available.
 3. Release cli-tools after its exact move-classifier, pgn-annotator and ai-analysis versions are available.
 
