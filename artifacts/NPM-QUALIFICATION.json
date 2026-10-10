@@ -1,0 +1,32 @@
+{
+  "schema": "knights-eye-npm-preparation/1",
+  "candidate": {
+    "name": "@knights-eye-chess/game-tree",
+    "version": "0.1.0-dev.4",
+    "archive": "artifacts/knights-eye-chess-game-tree-0.1.0-dev.4.tgz",
+    "bytes": 25139,
+    "sha256": "b4fe1dbef5882c07786a840f0612ab93df80807aa7f15c758619f8991f3b31bb",
+    "dependencies": {
+      "chess.js": "1.4.0"
+    },
+    "privateSource": true,
+    "privateTarball": false
+  },
+  "checks": {
+    "sourceAndInstalledTests": 129,
+    "publicEsmImports": 19,
+    "cliHelpCommands": 2,
+    "strictNodeNextTypes": true,
+    "browserConsumer": "Chromium: board mount, tree PGN import, supplied-evidence classifier",
+    "npmPublishDryRun": true,
+    "combinedSixArchiveInstall": true,
+    "historicalArchivesUnchanged": 62,
+    "immutableCollisionRejected": true
+  },
+  "registryPublicationPerformed": false,
+  "visibilityChanged": false,
+  "limitations": [
+    "No live model quality or engine performance claim",
+    "Owner npm account/scope authority and publication authorization required"
+  ]
+}

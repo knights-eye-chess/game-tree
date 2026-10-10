@@ -1,6 +1,6 @@
 {
   "name": "@knights-eye-chess/game-tree",
-  "version": "0.1.0-dev.3",
+  "version": "0.1.0-dev.4",
   "private": true,
   "type": "module",
   "description": "Private optional structural chess tree and PGN preview",
@@ -9,16 +9,16 @@
     "src",
     "tests",
     "build.mjs",
-    "npm-shrinkwrap.json",
     "README.md",
-    "vendor",
     "SOURCE-ORIGIN.json",
     "scripts",
     "LICENSE",
     "NOTICE",
     "LICENSING.md",
     "THIRD_PARTY_NOTICES.md",
-    "licenses"
+    "licenses",
+    "NPM-PUBLISHING.md",
+    "npm-release.json"
   ],
   "exports": {
     "./tree": {
@@ -39,7 +39,9 @@
     "test": "node --test tests/*.test.mjs",
     "check": "npm run build && npm test",
     "pack:checked": "npm run check && node scripts/pack.mjs",
-    "pack:artifact": "node scripts/pack.mjs"
+    "pack:artifact": "node scripts/pack.mjs",
+    "publish:verify": "node scripts/verify-release.mjs",
+    "publish:prepare": "npm run pack:checked && npm run publish:verify"
   },
   "engines": {
     "node": ">=24.0.0"
