@@ -1,12 +1,12 @@
 {
   "name": "@knights-eye-chess/game-tree",
-  "version": "0.1.0-dev.6",
+  "version": "0.1.0-dev.7",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "@knights-eye-chess/game-tree",
-      "version": "0.1.0-dev.6",
+      "version": "0.1.0-dev.7",
       "license": "MIT",
       "dependencies": {
         "chess.js": "1.4.0"
